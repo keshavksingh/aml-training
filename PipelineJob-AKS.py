@@ -56,7 +56,7 @@ run_config = RunConfiguration(conda_dependencies=conda_dep)
 run_config.target = compute_name
 
 exp = Experiment(workspace=ws, name="AMLWS-AKS-COMPUTE-IRIS-V1") 
-step_1 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+step_1 = PythonScriptStep(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                           script_name='Train-AKS.py',
                           compute_target=compute_name,
                           runconfig = run_config,
