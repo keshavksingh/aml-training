@@ -74,7 +74,7 @@ run_config.spark.configuration["spark.executor.instances"] = 1
 
 #run_config.environment.python.conda_dependencies = conda_dep
 """
-script_run_config = ScriptRunConfig(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+script_run_config = ScriptRunConfig(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                                     script= 'Train.py',
                                     run_config = run_config) 
 
@@ -87,7 +87,7 @@ print(run.get_portal_url())
 run.wait_for_completion()
 """
 exp = Experiment(workspace=ws, name="Local-IRIS-V1") 
-step_1 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+step_1 = PythonScriptStep(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                           script_name='Train.py',
                           compute_target=compute_name,
                           runconfig = run_config,
