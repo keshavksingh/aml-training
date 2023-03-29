@@ -59,7 +59,7 @@ run_config.spark.configuration["spark.driver.cores"] = 2
 run_config.spark.configuration["spark.executor.memory"] = "1g" 
 run_config.spark.configuration["spark.executor.cores"] = 1 
 run_config.spark.configuration["spark.executor.instances"] = 1 
-step_1 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+step_1 = PythonScriptStep(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                           script_name='Train.py',
                           compute_target=spark_compute_name,
                           runconfig = run_config,
@@ -67,7 +67,7 @@ step_1 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonpro
 
 run_config = RunConfiguration()
 run_config.target = vm_cluster_compute_name
-step_2 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+step_2 = PythonScriptStep(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                           script_name='Train-VM.py',
                           compute_target=vm_cluster_compute_name,
                           runconfig = run_config,
@@ -75,7 +75,7 @@ step_2 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonpro
 
 run_config = RunConfiguration(conda_dependencies=conda_dep)
 run_config.target = aks_compute_name
-step_3 = PythonScriptStep(source_directory = 'C:/Users/kesin/Downloads/pythonprojects/aml/ScheduleJob',
+step_3 = PythonScriptStep(source_directory = 'C:/Users/home/Downloads/pythonprojects/aml/ScheduleJob',
                           script_name='Train-AKS.py',
                           compute_target=aks_compute_name,
                           runconfig = run_config,
